@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="doctor-profile" style="padding: 50px 20px; text-align: center;">
+  <!-- Doctor's Image -->
+  <div style="margin-bottom: 30px;">
+    <img src="{{ url_for('static', filename='images/doc.jpg') }}" alt="Dr. Uma Paleti" style="width: 100%; max-width: 500px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); height: auto;">
+  </div>
+
+  <!-- Doctor's Details -->
+  <div style="max-width: 900px; margin: 0 auto; text-align: left; padding: 0 10px;">
+    <h2 style="margin-bottom: 15px; color: #2c3e50; text-align: center; font-size: 2em;">Dr. Uma Paleti – Dermatologist, Cosmetologist & Educator</h2>
+    <p style="font-size: 1.1em; color: #444; line-height: 1.7;">
+      Dr. Uma Paleti is a highly respected dermatologist and cosmetologist with over <strong>20 years of clinical experience</strong> in medical and aesthetic skin care. Her career reflects a lifelong commitment to dermatological excellence, scientific learning, and personalized patient care.
+    </p>
+    <p style="font-size: 1.1em; color: #444; line-height: 1.7;">
+      She holds an <strong>MD in Dermatology</strong> and has trained extensively in advanced cosmetic procedures, including lasers, anti-aging therapies, skin rejuvenation, and hair restoration techniques. Her clinical expertise is matched by her aesthetic vision — blending science with subtle artistry to deliver natural-looking and transformative results.
+    </p>
+    <p style="font-size: 1.1em; color: #444; line-height: 1.7;">
+      In addition to being the <strong>Founder and Chief Consultant at Ananya Skin & Laser Clinic</strong>, Dr. Uma also serves as a <strong>Professor of Dermatology</strong> at Mamata Medical College. She is deeply involved in academic teaching, research, and mentoring future dermatologists — inspiring them to approach medicine with compassion and precision.
+    </p>
+    <p style="font-size: 1.1em; color: #444; line-height: 1.7;">
+      Over the years, she has successfully treated thousands of patients suffering from acne, pigmentation, hair loss, allergies, autoimmune skin diseases, and more. She also specializes in non-surgical aesthetic procedures such as Botox, fillers, PRP, microneedling, chemical peels, and skin tightening treatments.
+    </p>
+    <p style="font-size: 1.1em; color: #444; line-height: 1.7;">
+      Her dedication to ongoing medical education keeps her at the forefront of global dermatology trends. She actively participates in international dermatology conferences and workshops to bring the safest and most effective techniques to her patients in India.
+    </p>
+    <p style="font-size: 1.1em; color: #444; line-height: 1.7;">
+      With a warm and approachable nature, Dr. Uma Paleti is beloved by her patients for her honesty, gentle touch, and deep listening. Her core philosophy is simple yet powerful: <em>“Healthy skin is a reflection of a healthy life.”</em>
+    </p>
+
+    <!-- Credentials -->
+    <ul style="margin-top: 20px; font-size: 1.05em; color: #333; line-height: 1.6; padding-left: 20px;">
+      <li>MBBS, MD, DVL (Dermatology, Venereology & Leprosy)</li>
+      <li>20+ years of experience in clinical dermatology and cosmetology</li>
+      <li>Founder & Chief Consultant – Ananya Skin & Laser Clinic</li>
+      <li>Professor of Dermatology – Mamata Medical College</li>
+      <li>Certified Specialist in Laser & Cosmetic Procedures</li>
+      <li>Member of IADVL, ACSI, and other global dermatology bodies</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

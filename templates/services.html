@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 style="color: #e91e63; text-align: center; margin-bottom: 20px;">Our Services</h2>
+<p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 1.1em; line-height: 1.6;">
+  At Ananya Skin & Laser Clinic, we offer a wide range of advanced dermatological and cosmetic services using international-standard technology and expert care. Whether you're dealing with skin concerns, hair fall, or aesthetic goals, we provide safe and personalized treatments to help you look and feel your best.
+</p>
+
+<!-- We Treat Section -->
+<section style="background-color: #fff0f5; padding: 30px 20px; margin: 20px auto 50px; border-radius: 12px; max-width: 900px; box-shadow: 0 4px 14px rgba(0,0,0,0.05);">
+  <h3 style="text-align: center; color: #e91e63; font-size: 1.6em; margin-bottom: 10px;">We Treat</h3>
+  <p style="font-size: 1.05em; line-height: 1.8; color: #444; text-align: center; margin: 0 auto;">
+    Vitiligo, Psoriasis, Urticaria, Acne Vulgaris, Alopecia, Eczema, Dermatitis, STD's (Sexually Transmitted Diseases), Genital and Mucosal Diseases, Nail Disorders, and all other acute and chronic skin conditions.
+  </p>
+</section>
+
+<h3 style="margin-top: 20px; color: #e91e63; text-align: center; font-size: 1.8em;">Featured Treatments</h3>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 30px 20px;">
+
+  {% set services = [
+    ('diode.jpg', 'Diode Laser – Laser Hair Removal', 'FDA-approved laser technology for permanent hair reduction. Safe and effective on Indian skin tones.'),
+    ('qswitch.jpg', 'Q-Switch Laser', 'Advanced laser for pigmentation, birthmarks, skin lightening, and tattoo removal.'),
+    ('fraxis.jpg', 'Fraxis Duo (CO₂ + RF Microneedling)', 'Scar and stretch mark reduction with skin tightening and collagen regeneration.'),
+    ('hydrafacial.jpg', 'HydraFacial', 'Hydrating and cleansing facial for instant glow and revitalization. Ideal before weddings and events.'),
+    ('gfc.jpg', 'GFC Therapy', 'Growth Factor Concentrate therapy for stimulating natural hair growth in both men and women.'),
+    ('prp.jpg', 'PRP Treatment', 'Platelet-Rich Plasma treatment for skin rejuvenation and effective hair loss control.'),
+    ('carbon.jpg', 'Carbon Laser Peel', 'A fast and effective laser facial to reduce oiliness, open pores, and brighten dull skin.'),
+    ('dermoscopy.jpg', 'Dermoscopy', 'Advanced imaging for accurate skin and hair diagnosis, mole mapping, and personalized treatment planning.'),
+    ('botox.jpg', 'Botox', 'Anti-wrinkle injections to reduce fine lines, frown lines, and signs of aging with natural-looking results.'),
+    ('chemical.jpg', 'Chemical Peels', 'Peels for acne, pigmentation, and uneven skin tone using dermatologist-grade formulas.'),
+    ('cosmelan.jpg', 'Cosmelan Depigmentation', 'Globally trusted peel to treat melasma, hyperpigmentation, and dark patches for a bright, even complexion.')
+  ] %}
+
+  {% for image, title, desc in services %}
+  <div style="background-color: #fff; max-width: 280px; width: 100%; padding: 20px; border-radius: 16px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); text-align: center; flex: 1 1 280px;">
+    <img src="{{ url_for('static', filename='images/' ~ image) }}" alt="{{ title }}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+    <h4 style="color: #e91e63; margin-bottom: 10px; font-size: 1.1em;">{{ title }}</h4>
+    <p style="font-size: 0.95em; color: #444; line-height: 1.5;">{{ desc }}</p>
+  </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}

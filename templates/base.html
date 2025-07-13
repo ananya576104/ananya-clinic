@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ananya Skin & Laser Clinic</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .logo {
+      max-height: 60px;
+      width: auto;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .branding {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e91e63;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-float img {
+      width: 55px;
+      height: 55px;
+    }
+
+    .sticky-book-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.95em;
+      color: #333;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .branding {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      .sticky-book-btn {
+        font-size: 1em;
+        padding: 10px 16px;
+      }
+
+      .whatsapp-float img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="branding">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Clinic Logo" class="logo">
+      <h1>Ananya Skin & Laser Clinic</h1>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dr. Uma Paleti | Ananya Skin & Laser Clinic</p>
+    <p><strong>Address:</strong> 10-2-107, Mammilagudem, near Pavillion Grounds, Khammam, Telangana 507001</p>
+    <p><strong>Phone:</strong> <a href="tel:+918341892555" style="color: #e91e63; text-decoration: none;">+91 83418 92555</a></p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/918341892555" class="whatsapp-float" target="_blank">
+    <img src="{{ url_for('static', filename='images/whatsapp-icon.png') }}" alt="Chat on WhatsApp">
+  </a>
+
+  <!-- Sticky Book Now Button -->
+  <a href="/contact" class="sticky-book-btn">Book Now</a>
+
+</body>
+</html>
