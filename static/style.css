@@ -288,3 +288,53 @@ body::before {
     height: 50px;
   }
 }
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.hamburger div {
+  height: 3px;
+  background-color: #e91e63;
+  border-radius: 2px;
+}
+
+/* Navigation menu */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  nav a {
+    margin: 10px 0;
+    color: #333;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}

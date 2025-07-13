@@ -16,6 +16,7 @@
       padding: 20px;
       border-bottom: 1px solid #eee;
       text-align: center;
+      position: relative;
     }
 
     .branding {
@@ -25,6 +26,24 @@
       gap: 15px;
       flex-wrap: wrap;
       margin-bottom: 10px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 18px;
+      cursor: pointer;
+      position: absolute;
+      top: 25px;
+      right: 25px;
+    }
+
+    .hamburger div {
+      height: 3px;
+      background-color: #e91e63;
+      border-radius: 2px;
     }
 
     nav {
@@ -77,13 +96,38 @@
     }
 
     @media (max-width: 768px) {
-      .branding {
-        flex-direction: column;
-        gap: 10px;
+      .hamburger {
+        display: flex;
       }
 
       nav {
-        gap: 15px;
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        width: 180px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        padding: 10px;
+        text-align: left;
+        color: #333;
+      }
+
+      .branding {
+        flex-direction: column;
+        gap: 10px;
       }
 
       .sticky-book-btn {
@@ -106,7 +150,16 @@
       <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Clinic Logo" class="logo">
       <h1>Ananya Skin & Laser Clinic</h1>
     </div>
-    <nav>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav id="nav-menu">
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/services">Services</a>
@@ -131,6 +184,14 @@
 
   <!-- Sticky Book Now Button -->
   <a href="/contact" class="sticky-book-btn">Book Now</a>
+
+  <!-- Toggle Script -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
