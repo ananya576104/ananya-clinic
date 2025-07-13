@@ -1,30 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
-<section class="appointment-section" style="padding: 40px 20px; max-width: 600px; margin: 0 auto;">
-  <h2 style="text-align: center; color: #e91e63; margin-bottom: 30px;">Book Your Appointment</h2>
 
-  <form action="/submit" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-    <div>
-      <label for="name" style="font-weight: bold;">Name</label><br>
-      <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-    </div>
+<section class="contact-section" style="padding: 40px 20px; max-width: 700px; margin: 0 auto;">
+  <h2 style="text-align: center; color: #e91e63; margin-bottom: 30px;">Contact Us</h2>
 
-    <div>
-      <label for="email" style="font-weight: bold;">Email</label><br>
-      <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-    </div>
+  <div style="font-size: 1.1em; line-height: 1.8; color: #333;">
+    <p><strong>Clinic Name:</strong> Ananya Skin & Laser Clinic</p>
 
-    <div>
-      <label for="phone" style="font-weight: bold;">Phone</label><br>
-      <input type="text" id="phone" name="phone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-    </div>
+    <p><strong>Address:</strong><br>
+      10-2-107, Mammilagudem,<br>
+      Near Pavillion Grounds,<br>
+      Khammam, Telangana – 507001
+    </p>
 
-    <div>
-      <label for="message" style="font-weight: bold;">Message</label><br>
-      <textarea id="message" name="message" required rows="4" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;"></textarea>
-    </div>
+    <p><strong>Phone:</strong>
+      <a href="tel:+918341892555" style="color: #e91e63; text-decoration: none;">+91 83418 92555</a>
+    </p>
 
-    <button type="submit" style="background-color: #e91e63; color: white; padding: 12px; border: none; border-radius: 6px; font-size: 1em; cursor: pointer;">Submit</button>
-  </form>
+    <p><strong>WhatsApp:</strong>
+      <a href="https://wa.me/918341892555" target="_blank" style="color: #e91e63; text-decoration: none;">
+        Click here to chat
+      </a>
+    </p>
+
+    <p><strong>Email:</strong> ananyaskinclinic@example.com</p>
+
+    <p><strong>Instagram:</strong>
+      <a href="https://www.instagram.com/ananyaskinlaserandhairclinic?igsh=ZjVhbzFsbnNmZGFv&utm_source=qr" target="_blank" style="color: #e91e63; text-decoration: none;">
+        @ananyaskinlaserandhairclinic
+      </a>
+    </p>
+  </div>
 </section>
+
 {% endblock %}
